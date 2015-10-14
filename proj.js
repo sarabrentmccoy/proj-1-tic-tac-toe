@@ -1,8 +1,8 @@
 $(document).ready(function() {
+  $('.start-button').html('Start!');
   var newGame = Object.create(GamePrototype);
   newGame.init();
   newGame.playGame();
-  $('.start-button').html('Start!');
     var x = 'x';
     var o = 'o';
     blank = '';
@@ -10,14 +10,17 @@ $(document).ready(function() {
     var o_win = 0;
     var x_win = 0;
     $('board').add([blank, blank, blank, blank, blank, blank, blank, blank, blank]);
+    $( "#reset-game" ).trigger( "click")
 });
+//useful  maybe
+var cellNumber = $('div').data('cell');
 
-if(i%2 === 0){
-  var startPlayer = x
-}
-else {
-  var startPlayer = o
-};
+//scoreboard
+$( "div" ).data( "test", { first: xWins(), last: oWins() } );
+$( "span:first" ).text( $( "div" ).data( "test" ).first );
+$( "span:last" ).text( $( "div" ).data( "test" ).last );
+
+
 
 var winner = [x, o];
 if ($('d1').hasClass(winner) || $('d2').hasClass(winner) || $('top').hasClass(winner) || $('center').hasClass(winner) || $('bottom').hasClass(winner) || $('left').hasClass(winner) || $('right').hasClass(winner) || $('middle').hasClass(winner) {
@@ -26,19 +29,42 @@ if ($('d1').hasClass(winner) || $('d2').hasClass(winner) || $('top').hasClass(wi
 
 else if (count == 9)
   {
-  alert('Its a tie. It will restart.')
+  alert("It's a tie. Press start to play again!")
 
 
-$( "#some-id" ).on( "click", someCallbackFunction )
+$('.square').on('click', someCallbackFunction) {
 
-$( "#reset-game" ).trigger( "click" );
+}
 
-function getWinner()
+$('#reset-game').trigger('click') {
 
-function winsRow() {
+  };
 
-};
+//adding x o value to squares
+var turn = function() {
+  if (player === x) {
+  $('div.square').html(x)
+  }
+}
+$('square').click(function() {
+  var value;
 
-function winsColumn()
+  switch ($('.square').index(this)) {
+    case 0:
+      value = $('.square').data('played');
+      break;
+    case 1:
+      $('.square').data('played', x);
+      value = x;
+      break;
+    case 2:
+      $('.square').data('played', o);
+      value = o;
+      break;
+  }
+  $ ('')
+});
 
-function winsDiagonal()
+//clearing board
+
+//a turn

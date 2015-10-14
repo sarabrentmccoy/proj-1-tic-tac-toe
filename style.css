@@ -11,10 +11,13 @@ h2 {
 
 }
 
-.startbutton {
-  background-color: red;
-  font-size: 90px;
+span {
+  font-color: purple;
+  font-family: sans-serif;
+  font-size: 25px;
+
 }
+
 .board {
   width: 450px;
   height: 450px;
@@ -25,10 +28,6 @@ h2 {
   width: 450px;
   height: 120px;
   background-color: yellow;
-}
-
-.scoreboard > article {
-  margin-left: 70px
 }
 
 .square {

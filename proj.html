@@ -11,7 +11,7 @@
   <h1>TIC TAC TOE</h1>
   <div class = 'game'>
     <button type = 'button' class 'startbutton'>Start!</button>
-    <div id = 'board' class = 'board'>
+    <div data-board='board' class = 'board'>
      <div data-square='0' class = 'square top left d1'></div>
      <div data-square='1' class = 'square top middle'></div>
      <div data-square='2' class = 'square top right d2'></div>
@@ -24,18 +24,14 @@
     </div>
     <div class = 'scoreboard'>
      <h2>Score</h2>
-     <article class = 'p1'>
-       <dl>
-         <dt>PLAYER ONE</dt>
-         <dd></dd>
-       </dl>
-     </article>
-     <article class = 'p2'>
-       <dl>
-         <dt>PLAYER TWO</dt>
-         <dd></dd>
-     </dl>
-     </article>
+     <p class = 'p1'>
+       PLAYER ONE
+       <span></span>
+     </p>
+     <p class = 'p2'>
+        PLAYER TWO
+        <span></span>
+     </p>
     </div>
   </div>
   <footer>
@@ -45,4 +41,25 @@
 
 </html>
 
+<script>
+//adding x o value to squares
+$('square').click(function() {
+  var value;
+
+  switch ($('square').index(this)) {
+    case 0:
+      value = $('square').data('played');
+      break;
+    case 1:
+      $('square').data('played', x);
+      value = x;
+      break;
+    case 2:
+      $('square').data('played', o);
+      value = o;
+      break;
+  }
+  $ ('')
+});
+</script>
 
