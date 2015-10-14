@@ -1,0 +1,57 @@
+body {
+  background-color: pink;
+  font-family: sans-serif;
+}
+
+.game {
+
+}
+
+h2 {
+
+}
+
+.startbutton {
+  background-color: red;
+  font-size: 90px;
+}
+.board {
+  width: 450px;
+  height: 450px;
+  margin: 0px 0px 0px 0px;
+}
+
+.scoreboard {
+  width: 450px;
+  height: 120px;
+  background-color: yellow;
+}
+
+.scoreboard > article {
+  margin-left: 70px
+}
+
+.square {
+  height: 33.333333%;
+  width: 33.333333%;
+  float: left;
+  background-color: blue;
+}
+
+.square:hover {
+  background-color: brown;
+}
+
+.left{
+  clear: both;
+}
+
+div {
+  display: block;
+}
+
+footer {
+  margin-top: 10px;
+}
+
+
