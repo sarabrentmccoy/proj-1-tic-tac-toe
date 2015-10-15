@@ -3,15 +3,15 @@
 //beginning of starter code
 function cells(key) {
     switch(key) {
-        case 'a0': return null;
-        case 'b1': return null;
-        case 'c2': return null;
-        case 'd3': return null;
-        case 'e4': return null;
-        case 'f5': return null;
-        case 'g6': return null;
-        case 'h7': return null;
-        case 'i8': return null;
+        case '0': return null;
+        case '1': return null;
+        case '2': return null;
+        case '3': return null;
+        case '4': return null;
+        case '5': return null;
+        case '6': return null;
+        case '7': return null;
+        case '8': return null;
         default : return null;
     }
 }
