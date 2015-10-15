@@ -1,5 +1,3 @@
-
-
 //beginning of starter code
 function cells(key) {
     switch(key) {
@@ -94,4 +92,6 @@ $(document).ready(function(){
     squares[squareClickedId] = "X";
     $(squareClickedOn).html("X");
  });
+
+
 

@@ -9,57 +9,46 @@
 
 <body>
   <h1>TIC TAC TOE</h1>
-  <div class = 'game'>
-    <button type = 'button' class 'startbutton'>Start!</button>
-    <div data-board='board' class = 'board'>
-     <div data-square='0' class = 'square top left d1'></div>
-     <div data-square='1' class = 'square top middle'></div>
-     <div data-square='2' class = 'square top right d2'></div>
-     <div data-square='3' class = 'square center left'></div>
-     <div data-square='4' class = 'square center middle d1 d2'></div>
-     <div data-square='5' class = 'square center right'></div>
-     <div data-square='6' class = 'square bottom left d2'></div>
-     <div data-square='7' class = 'square bottom middle'></div>
-     <div data-square='8' class = 'square bottom right d1'></div>
+  <div class='message'></div>
+  <button type = 'button' class = 'start-button'>Start!</button>
+  <div class ='game'>
+    <div id = 'board' class = 'board'>
+     <div id ='0' class = 'square top left d1'>0</div>
+     <div id ='1' class = 'square top middle'>1</div>
+     <div id ='2' class = 'square top right d2'>2</div>
+     <div id ='3' class = 'square center left'>3</div>
+     <div id ='4' class = 'square center middle d1 d2'>4</div>
+     <div id ='5' class = 'square center right'>5</div>
+     <div id ='6' class = 'square bottom left d2'>6</div>
+     <div id ='7' class = 'square bottom middle'>7</div>
+     <div id ='8' class = 'square bottom right d1'>8</div>
     </div>
+  </div>
     <div class = 'scoreboard'>
      <h2>Score</h2>
-     <p class = 'p1'>
-       PLAYER ONE
-       <span></span>
+     <p class = 'X'>
+      X
+      <span class= qty x></span>
      </p>
-     <p class = 'p2'>
-        PLAYER TWO
-        <span></span>
+     <p class = 'tie'>
+      TIE
+      <span class = qty o></span>
+     <p class = '0'>
+      O
+      <span></span>
      </p>
     </div>
+  </div>
   </div>
   <footer>
     This game was programmed by
   </footer>
+<script>
+
+</script>
 </body>
 
 </html>
 
-<script>
-//adding x o value to squares
-$('square').click(function() {
-  var value;
 
-  switch ($('square').index(this)) {
-    case 0:
-      value = $('square').data('played');
-      break;
-    case 1:
-      $('square').data('played', x);
-      value = x;
-      break;
-    case 2:
-      $('square').data('played', o);
-      value = o;
-      break;
-  }
-  $ ('')
-});
-</script>
 
