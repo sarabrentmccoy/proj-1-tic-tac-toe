@@ -77,8 +77,8 @@ var switchTurns = function() {
       oMoves++;
       $(squareClickedOn).html(playerO);
     }
-    if (!someoneWins()) {
-      // checkTie();
+    if (someoneWins() = false) {
+      checkTie();
       switchTurns();
     }
  });
@@ -102,11 +102,28 @@ var someoneWins = function() {
       return true;
     };
 }
+
 var checkForWinner = function() {
-    if someoneWins() = true {
-      return winner = player;
-    }
+  if someoneWins() = true {
+    resetBoard();
+    return winner = player;
+  };
 }
+
+var addWins = function() {
+  checkForWinner();
+  if (winner === playerX) {
+    return xWinCount++;
+  }
+  else if (winner === playerO) {
+    return oWinCount++;
+  }
+  else {
+    return null;
+  };
+}
+
+
     // if (board[0] === board[1] && board[1] === board[2] && board[2] === playerX
     //   ||board[3] === board[4] && board[4] === board[5] && board[5] === playerX
     //   ||board[6] === board[7] && board[7] === board[8] && board[8] === playerX
