@@ -97,31 +97,41 @@ var switchTurns = function() {
 // }
 
 var someoneWins = function() {
-    if (board[0] === board[1] && board[1] === board[2] && board[2] === playerX
-      ||board[3] === board[4] && board[4] === board[5] && board[5] === playerX
-      ||board[6] === board[7] && board[7] === board[8] && board[8] === playerX
-      ||board[0] === board[3] && board[3] === board[6] && board[6] === playerX
-      ||board[1] === board[4] && board[4] === board[7] && board[7] === playerX
-      ||board[2] === board[5] && board[5] === board[8] && board[8] === playerX
-      ||board[0] === board[4] && board[4] === board[8] && board[8] === playerX
-      ||board[2] === board[4] && board[4] === board[6] && board[6] === playerX) {
-      var winner = playerX;
-      msg(winner + ' won that one! Play again?');
-      resetBoard();
-      return winner;
+    for(var index = 0; index < 3; index++) {
+      board.eq(3*index).text() === board.eq(3*index + 1).text() && board.eq(3*index).text() === board.eq(3*index +2) && board.eq(3*index).text() === player && board.eq(3*index).text() !== '') {
+      return true;
+    };
+}
+var checkForWinner = function() {
+    if someoneWins() = true {
+      return winner = player;
+    }
+}
+    // if (board[0] === board[1] && board[1] === board[2] && board[2] === playerX
+    //   ||board[3] === board[4] && board[4] === board[5] && board[5] === playerX
+    //   ||board[6] === board[7] && board[7] === board[8] && board[8] === playerX
+    //   ||board[0] === board[3] && board[3] === board[6] && board[6] === playerX
+    //   ||board[1] === board[4] && board[4] === board[7] && board[7] === playerX
+    //   ||board[2] === board[5] && board[5] === board[8] && board[8] === playerX
+    //   ||board[0] === board[4] && board[4] === board[8] && board[8] === playerX
+    //   ||board[2] === board[4] && board[4] === board[6] && board[6] === playerX) {
+    //   var winner = playerX;
+    //   msg(winner + ' won that one! Play again?');
+    //   resetBoard();
+    //   return winner;
 
-    } else if (board[0] === board[1] && board[1] === board[2] && board[2] === playerO
-      ||board[3] === board[4] && board[4] === board[5] && board[5] === playerO
-      ||board[6] === board[7] && board[7] === board[8] && board[8] === playerO
-      ||board[0] === board[3] && board[3] === board[6] && board[6] === playerO
-      ||board[1] === board[4] && board[4] === board[7] && board[7] === playerO
-      ||board[2] === board[5] && board[5] === board[8] && board[8] === playerO
-      ||board[0] === board[4] && board[4] === board[8] && board[8] === playerO
-      ||board[2] === board[4] && board[4] === board[6] && board[6] === playerO) {
-      var winner = playerO;
-      msg(winner + ' won that one! Play again?');
-      resetBoard();
-      return winner;
+    // } else if (board[0] === board[1] && board[1] === board[2] && board[2] === playerO
+    //   ||board[3] === board[4] && board[4] === board[5] && board[5] === playerO
+    //   ||board[6] === board[7] && board[7] === board[8] && board[8] === playerO
+    //   ||board[0] === board[3] && board[3] === board[6] && board[6] === playerO
+    //   ||board[1] === board[4] && board[4] === board[7] && board[7] === playerO
+    //   ||board[2] === board[5] && board[5] === board[8] && board[8] === playerO
+    //   ||board[0] === board[4] && board[4] === board[8] && board[8] === playerO
+    //   ||board[2] === board[4] && board[4] === board[6] && board[6] === playerO) {
+    //   var winner = playerO;
+    //   msg(winner + ' won that one! Play again?');
+    //   resetBoard();
+    //   return winner;
     // } else if (totalMoves === 9) {
     //   msg("It's a tie!")
     //   resetBoard();
