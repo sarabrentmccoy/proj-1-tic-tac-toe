@@ -1,7 +1,5 @@
-# proj-1-tic-tac-toe
-My game doesn't yet successfully report score, nor does it report a tie. It doesn't use AJAX. I know these are learning objectives of the project, and I am at peace with an unsatisfactory score, so long as I can continue to work on this and have the resulting work, for which I will feel more pride, reviewed.
+I used jQuery, Javascript, HTML/CSS to build this game as part of GA WDI cohort 9 in fall 2015.
 
-This game, though its visuals and functionality prove less than stellar, did function quite well (in a different sense) as a tool to teach me how to learn, how to plan, how to ask for help. In these earlier stages, when finding and remembering tools takes a good bit of collaboration and research (and is not something that comes naturally), I should leave the paper sooner, even if I don't fully understand each bit of logic; I should timebox my research and iterations and tinkering, and ask for help more frequently.
 
 Below are some of the notes that informed not just my code but also my strategy, including my preliminary wireframe and list of components.
 
